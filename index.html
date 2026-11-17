@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Checker</title>
+    <style>
+        input{
+            height:20px;
+            border-radius: 5px;
+            color: brown;
+        }
+        button{
+            padding:10px;
+            border: 1px solid black;
+            background-color:black;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body><br><br><br><br>
+    <center>
+    <input type="text" placeholder="Enter English Mark" id="english"><br><br>
+    <input type="text" placeholder="Enter Maths Mark" id="maths"><br><br>
+    <input type="text" placeholder="Enter Hindi Mark" id="hindi"><br><br>
+    <input type="text" placeholder="Enter Science Mark" id="science"><br><br>
+    <input type="text" placeholder="Enter Marathi Mark" id="marathi"><br><br>
+    <button onclick="percentage()">Check Percentage</button>
+    </center>    
+    <script>
+        function percentage(){
+        let a = parseInt(document.getElementById("english").value);
+        let b = parseInt(document.getElementById("maths").value);
+        let c = parseInt(document.getElementById("hindi").value);
+        let d = parseInt(document.getElementById("science").value);
+        let e = parseInt(document.getElementById("marathi").value);
+        let marks = a+b+c+d+e; 
+        let percentage = marks/250*100;
+        if (percentage>=35){
+            document.writeln(percentage+"%");
+            document.writeln("PASS!");
+        }
+        else{
+            document.writeln(percentage+"%");
+            document.writeln("FAIL!");
+        }
+        }
+    </script>
+</body>
+</html>
